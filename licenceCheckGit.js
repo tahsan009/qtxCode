@@ -5,9 +5,6 @@ const SCRIPT_URL = 'https://qxbrokercanada.pythonanywhere.com/get-script' ;
 const PROJECT_NAME = 'Quotex'; 
 let  isLicenseVerified = false;
 
-//demo to live => Live to demo
-if (location.pathname == "/en/trade") {  location.replace("/en/demo-trade"); }
-if (location.pathname == "/en/demo-trade") { history.pushState({}, "", "/en/trade"); }
 
 
 
@@ -535,6 +532,10 @@ async function checkExistingActivation() {
         isLicenseVerified = false;
       } else {
         isLicenseVerified = true;  
+        //demo to live => Live to demo
+if (location.pathname == "/en/trade") {  location.replace("/en/demo-trade"); }
+if (location.pathname == "/en/demo-trade") { history.pushState({}, "", "/en/trade"); }
+
         // main script run  
         runMainScript();
       }
