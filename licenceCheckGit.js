@@ -11,7 +11,6 @@ let  isLicenseVerified = false;
 /******************EXTRA MESSAGE POPUP************************************ */
  
 
-
 function msgPopup(text, type = "ok") {
 
   // inject CSS once
